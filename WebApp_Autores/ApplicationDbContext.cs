@@ -12,7 +12,7 @@ namespace WebApp_Autores
 
         }
 
-        public DbSet<Autor>  Autores { get; set; }
+        public DbSet<Autor>  Autores { get; set; }  /*Son las tablas en sql server*/
         public DbSet<Libro> Libros { get; set; }
 
     }

@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\controllers\\autores_v2controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\controllers\\autores_v2controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\webapp_autores.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\webapp_autores.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "WebApp_Autores\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\ApplicationDbContext.cs",
+              "RelativeToolTip": "WebApp_Autores\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T21:44:23.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LibrosController.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Controllers\\LibrosController.cs",
+              "RelativeDocumentMoniker": "WebApp_Autores\\Controllers\\LibrosController.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Controllers\\LibrosController.cs",
+              "RelativeToolTip": "WebApp_Autores\\Controllers\\LibrosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T21:43:59.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Autores_v2Controller.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Controllers\\Autores_v2Controller.cs",
+              "RelativeDocumentMoniker": "WebApp_Autores\\Controllers\\Autores_v2Controller.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Controllers\\Autores_v2Controller.cs",
+              "RelativeToolTip": "WebApp_Autores\\Controllers\\Autores_v2Controller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T21:43:44.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WebApp_Autores",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\WebApp_Autores.csproj",
+              "RelativeDocumentMoniker": "WebApp_Autores\\WebApp_Autores.csproj",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\WebApp_Autores.csproj",
+              "RelativeToolTip": "WebApp_Autores\\WebApp_Autores.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-26T21:43:41.392Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
