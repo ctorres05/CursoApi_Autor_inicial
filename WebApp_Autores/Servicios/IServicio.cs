@@ -6,7 +6,7 @@ namespace WebApp_Autores.Servicios
         Guid DameGuidScoped();
         Guid DameGuidSingleton();
         Guid DameGuidTransit();
-         void RealizarTarea();
+        void RealizarTarea();
     }
 
 

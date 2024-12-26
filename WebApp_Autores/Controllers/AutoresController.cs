@@ -46,10 +46,13 @@ namespace WebApp_Autores.Controllers
         [HttpGet("/listado")]          /* ruta seria esta: /listado  */
         public async Task<ActionResult<List<Autor>>> Get()
         {
-            servicio.RealizarTarea();
+           // servicio.RealizarTarea();
+
+            //logger.LogInformation("despues4 NO FUNCIONA");
 
             return await contex.Autores.Include(x=> x.Libros).ToListAsync();     /*Esto me trae en caso de que esten relacionados las tablas*/
-           /* return await contex.Autores.ToListAsync();*/
+          //  return await contex.Autores.ToListAsync();
+
 
 
         }

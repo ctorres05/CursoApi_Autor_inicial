@@ -26,9 +26,10 @@
         public Guid DameGuidScoped()    { return servicioScoped.guid; }
         public Guid DameGuidSingleton() { return servicioSingleton.guid; }
 
-        void IServicio.RealizarTarea( )
+        void IServicio.RealizarTarea()
         {
-            throw new NotImplementedException();
+            return ;
+            //throw new NotImplementedException();
         }
     }
 

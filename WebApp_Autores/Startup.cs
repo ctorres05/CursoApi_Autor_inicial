@@ -2,6 +2,7 @@
 using Serilog;
 using System.Text.Json.Serialization;
 using WebApp_Autores.Controllers;
+using WebApp_Autores.Midelware;
 using WebApp_Autores.Servicios;
 
 namespace WebApp_Autores
@@ -46,30 +47,9 @@ namespace WebApp_Autores
         public void Configue(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
 
-            app.Use(async (contexto, siguiente) =>
-            {
-                using (var ms = new MemoryStream())
-                {
-                    var cuerpooriginalrespuesta = contexto.Response.Body;
-                    contexto.Response.Body = ms;
+            //  app.UseMiddleware<LogearRespuestaHttpMidelware>(); /*Se reemplaza por la linea de abajo*/
+            app.UseLoguearRespuestaHttp();
 
-                    await siguiente.Invoke();
-
-                    ms.Seek(0, SeekOrigin.Begin);
-                    string respueta = new StreamReader(ms).ReadToEnd();
-                    ms.Seek(0, SeekOrigin.Begin);
-
-                    await ms.CopyToAsync(cuerpooriginalrespuesta);
-                    contexto.Response.Body = cuerpooriginalrespuesta;
-                    respueta = "CRT %%%%%%%" + respueta + " CRT %%%%%%%";
-
-                    logger.LogInformation(respueta);
-
-
-                }
-            }
-
-            );
 
             // Configure the HTTP request pipeline.
             if (env.IsDevelopment())
