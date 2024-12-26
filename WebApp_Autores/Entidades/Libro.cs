@@ -1,8 +1,12 @@
-﻿namespace WebApp_Autores.Entidades
+﻿using WebApp_Autores.Validaciones;
+
+namespace WebApp_Autores.Entidades
 {
     public class Libro
     {
         public int Id { get; set; }
+
+        [PrimeraLetraMayusculaAtribute]
         public string Titulo { get; set; }
 
         public int AutorId { get; set; }

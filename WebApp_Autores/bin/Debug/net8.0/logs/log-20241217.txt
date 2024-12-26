@@ -1,0 +1,2 @@
+2024-12-17 18:10:50.205 -03:00 [INF] Este es un mensaje de información de ejemplo.
+2024-12-17 18:10:50.306 -03:00 [ERR] Este es un mensaje de error de ejemplo.

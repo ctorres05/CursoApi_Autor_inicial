@@ -14,14 +14,11 @@ namespace WebApp_Autores.Controllers
         public LibrosController(ApplicationDbContext contex)
         {
             this.context = contex;
-
         }
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Libro>> Get (int id)
         {
             return await context.Libros.Include(x => x.Autor).FirstOrDefaultAsync(x => x.Id == id);
-          
-
         }
 
         [HttpPost]

@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "jM22CzlwZCjeGe0F2YNNypg8OE/gRdQnwVOJSF+lyWY=",
+  "Hash": "weO+yCM5BZUDfQEn45o1WYqW53Dkr2WI6JKeb5YCOOk=",
   "Source": "WebApp_Autores",
   "BasePath": "_content/WebApp_Autores",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

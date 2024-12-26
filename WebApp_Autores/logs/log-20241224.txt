@@ -1,0 +1,1865 @@
+2024-12-24 12:23:24.043 -03:00 [INF] La aplicación ha iniciado correctamente.
+2024-12-24 12:23:24.084 -03:00 [ERR] Este es un ejemplo de log de error.
+2024-12-24 12:23:24.401 -03:00 [INF] Now listening on: https://localhost:7243
+2024-12-24 12:23:24.404 -03:00 [INF] Now listening on: http://localhost:5295
+2024-12-24 12:23:24.544 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 12:23:24.553 -03:00 [INF] Hosting environment: Development
+2024-12-24 12:23:24.554 -03:00 [INF] Content root path: C:\Users\carlo\OneDrive\Documentos\Programas NET\Curso API\WebApp_Autores\WebApp_Autores
+2024-12-24 12:23:25.512 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/swagger/index.html - null null
+2024-12-24 12:23:25.793 -03:00 [INF] CRT******* <!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+    <style>
+
+        html {
+            box-sizing: border-box;
+            overflow: -moz-scrollbars-vertical;
+            overflow-y: scroll;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            background: #fafafa;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div id="swagger-ui"></div>
+
+    <!-- Workaround for https://github.com/swagger-api/swagger-editor/issues/1371 -->
+    <script>
+        if (window.navigator.userAgent.indexOf("Edge") > -1) {
+            console.log("Removing native Edge fetch in favor of swagger-ui's polyfill")
+            window.fetch = undefined;
+        }
+    </script>
+
+    <script src="./swagger-ui-bundle.js"></script>
+    <script src="./swagger-ui-standalone-preset.js"></script>
+    <script>
+        /* Source: https://gist.github.com/lamberta/3768814
+         * Parse a string function definition and return a function object. Does not use eval.
+         * @param {string} str
+         * @return {function}
+         *
+         * Example:
+         *  var f = function (x, y) { return x * y; };
+         *  var g = parseFunction(f.toString());
+         *  g(33, 3); //=> 99
+         */
+        function parseFunction(str) {
+            if (!str) return void (0);
+
+            var fn_body_idx = str.indexOf('{'),
+                fn_body = str.substring(fn_body_idx + 1, str.lastIndexOf('}')),
+                fn_declare = str.substring(0, fn_body_idx),
+                fn_params = fn_declare.substring(fn_declare.indexOf('(') + 1, fn_declare.lastIndexOf(')')),
+                args = fn_params.split(',');
+
+            args.push(fn_body);
+
+            function Fn() {
+                return Function.apply(this, args);
+            }
+            Fn.prototype = Function.prototype;
+
+            return new Fn();
+        }
+
+        window.onload = function () {
+            var configObject = JSON.parse('{"urls":[{"url":"v1/swagger.json","name":"WebApp_Autores v1"}],"deepLinking":false,"persistAuthorization":false,"displayOperationId":false,"defaultModelsExpandDepth":1,"defaultModelExpandDepth":1,"defaultModelRendering":"example","displayRequestDuration":false,"docExpansion":"list","showExtensions":false,"showCommonExtensions":false,"supportedSubmitMethods":["get","put","post","delete","options","head","patch","trace"],"tryItOutEnabled":false}');
+            var oauthConfigObject = JSON.parse('{"scopeSeparator":" ","scopes":[],"useBasicAuthenticationWithAccessCodeGrant":false,"usePkceWithAuthorizationCodeGrant":false}');
+
+            // Workaround for https://github.com/swagger-api/swagger-ui/issues/5945
+            configObject.urls.forEach(function (item) {
+                if (item.url.startsWith("http") || item.url.startsWith("/")) return;
+                item.url = window.location.href.replace("index.html", item.url).split('#')[0];
+            });
+
+            // If validatorUrl is not explicitly provided, disable the feature by setting to null
+            if (!configObject.hasOwnProperty("validatorUrl"))
+                configObject.validatorUrl = null
+
+            // If oauth2RedirectUrl isn't specified, use the built-in default
+            if (!configObject.hasOwnProperty("oauth2RedirectUrl"))
+                configObject.oauth2RedirectUrl = (new URL("oauth2-redirect.html", window.location.href)).href;
+
+            // Apply mandatory parameters
+            configObject.dom_id = "#swagger-ui";
+            configObject.presets = [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset];
+            configObject.layout = "StandaloneLayout";
+
+            // Parse and add interceptor functions
+            var interceptors = JSON.parse('{"RequestInterceptorFunction":null,"ResponseInterceptorFunction":null}');
+            if (interceptors.RequestInterceptorFunction)
+                configObject.requestInterceptor = parseFunction(interceptors.RequestInterceptorFunction);
+            if (interceptors.ResponseInterceptorFunction)
+                configObject.responseInterceptor = parseFunction(interceptors.ResponseInterceptorFunction);
+
+            // Begin Swagger UI call region
+
+            const ui = SwaggerUIBundle(configObject);
+
+            ui.initOAuth(oauthConfigObject);
+
+            // End Swagger UI call region
+
+            window.ui = ui
+        }
+    </script>
+</body>
+</html>
+ ******CRT
+2024-12-24 12:23:25.812 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/swagger/index.html - 200 null text/html;charset=utf-8 314.4314ms
+2024-12-24 12:23:25.830 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 12:23:25.844 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 14.8962ms
+2024-12-24 12:23:25.855 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/_vs/browserLink - null null
+2024-12-24 12:23:25.937 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.6822ms
+2024-12-24 12:23:26.138 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/swagger/index.html - null null
+2024-12-24 12:23:26.149 -03:00 [INF] CRT******* <!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+    <style>
+
+        html {
+            box-sizing: border-box;
+            overflow: -moz-scrollbars-vertical;
+            overflow-y: scroll;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            background: #fafafa;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div id="swagger-ui"></div>
+
+    <!-- Workaround for https://github.com/swagger-api/swagger-editor/issues/1371 -->
+    <script>
+        if (window.navigator.userAgent.indexOf("Edge") > -1) {
+            console.log("Removing native Edge fetch in favor of swagger-ui's polyfill")
+            window.fetch = undefined;
+        }
+    </script>
+
+    <script src="./swagger-ui-bundle.js"></script>
+    <script src="./swagger-ui-standalone-preset.js"></script>
+    <script>
+        /* Source: https://gist.github.com/lamberta/3768814
+         * Parse a string function definition and return a function object. Does not use eval.
+         * @param {string} str
+         * @return {function}
+         *
+         * Example:
+         *  var f = function (x, y) { return x * y; };
+         *  var g = parseFunction(f.toString());
+         *  g(33, 3); //=> 99
+         */
+        function parseFunction(str) {
+            if (!str) return void (0);
+
+            var fn_body_idx = str.indexOf('{'),
+                fn_body = str.substring(fn_body_idx + 1, str.lastIndexOf('}')),
+                fn_declare = str.substring(0, fn_body_idx),
+                fn_params = fn_declare.substring(fn_declare.indexOf('(') + 1, fn_declare.lastIndexOf(')')),
+                args = fn_params.split(',');
+
+            args.push(fn_body);
+
+            function Fn() {
+                return Function.apply(this, args);
+            }
+            Fn.prototype = Function.prototype;
+
+            return new Fn();
+        }
+
+        window.onload = function () {
+            var configObject = JSON.parse('{"urls":[{"url":"v1/swagger.json","name":"WebApp_Autores v1"}],"deepLinking":false,"persistAuthorization":false,"displayOperationId":false,"defaultModelsExpandDepth":1,"defaultModelExpandDepth":1,"defaultModelRendering":"example","displayRequestDuration":false,"docExpansion":"list","showExtensions":false,"showCommonExtensions":false,"supportedSubmitMethods":["get","put","post","delete","options","head","patch","trace"],"tryItOutEnabled":false}');
+            var oauthConfigObject = JSON.parse('{"scopeSeparator":" ","scopes":[],"useBasicAuthenticationWithAccessCodeGrant":false,"usePkceWithAuthorizationCodeGrant":false}');
+
+            // Workaround for https://github.com/swagger-api/swagger-ui/issues/5945
+            configObject.urls.forEach(function (item) {
+                if (item.url.startsWith("http") || item.url.startsWith("/")) return;
+                item.url = window.location.href.replace("index.html", item.url).split('#')[0];
+            });
+
+            // If validatorUrl is not explicitly provided, disable the feature by setting to null
+            if (!configObject.hasOwnProperty("validatorUrl"))
+                configObject.validatorUrl = null
+
+            // If oauth2RedirectUrl isn't specified, use the built-in default
+            if (!configObject.hasOwnProperty("oauth2RedirectUrl"))
+                configObject.oauth2RedirectUrl = (new URL("oauth2-redirect.html", window.location.href)).href;
+
+            // Apply mandatory parameters
+            configObject.dom_id = "#swagger-ui";
+            configObject.presets = [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset];
+            configObject.layout = "StandaloneLayout";
+
+            // Parse and add interceptor functions
+            var interceptors = JSON.parse('{"RequestInterceptorFunction":null,"ResponseInterceptorFunction":null}');
+            if (interceptors.RequestInterceptorFunction)
+                configObject.requestInterceptor = parseFunction(interceptors.RequestInterceptorFunction);
+            if (interceptors.ResponseInterceptorFunction)
+                configObject.responseInterceptor = parseFunction(interceptors.ResponseInterceptorFunction);
+
+            // Begin Swagger UI call region
+
+            const ui = SwaggerUIBundle(configObject);
+
+            ui.initOAuth(oauthConfigObject);
+
+            // End Swagger UI call region
+
+            window.ui = ui
+        }
+    </script>
+</body>
+</html>
+ ******CRT
+2024-12-24 12:23:26.149 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/swagger/v1/swagger.json - null null
+2024-12-24 12:23:26.162 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/swagger/index.html - 200 null text/html;charset=utf-8 24.2673ms
+2024-12-24 12:23:26.199 -03:00 [INF] CRT******* {
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WebApp_Autores",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/autores_CT/listado": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/listado": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/autores_CT": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Autores"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/autores_CT/DameGUID": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/autores_CT/primero": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "parameters": [
+          {
+            "name": "miparametro",
+            "in": "header",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "nombre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/autores_CT/buscador/{id}": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/autores_CT/buscador_curso/{id}/{nombre}": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "nombre",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/autores_CT/buscador_curso/{nombre}": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "parameters": [
+          {
+            "name": "nombre",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/autores_CT/{id}": {
+      "put": {
+        "tags": [
+          "Autores"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Autores"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/libros/{id}": {
+      "get": {
+        "tags": [
+          "Libros"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Libro"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Libro"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Libro"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/libros": {
+      "post": {
+        "tags": [
+          "Libros"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Libro"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Libro"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Libro"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Xautores_CT_V2": {
+      "get": {
+        "tags": [
+          "XAutores_v2"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Xautores_CT_V3": {
+      "get": {
+        "tags": [
+          "XAutores_v3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Autor": {
+        "required": [
+          "edad",
+          "nombre"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
+          },
+          "edad": {
+            "maximum": 120,
+            "minimum": 18,
+            "type": "integer",
+            "format": "int32"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "libros": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Libro"
+            },
+            "nullable": true
+          },
+          "mayor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "menor": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Libro": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "titulo": {
+            "type": "string",
+            "nullable": true
+          },
+          "autorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "autor": {
+            "$ref": "#/components/schemas/Autor"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+} ******CRT
+2024-12-24 12:23:26.263 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 113.5423ms
+2024-12-24 12:23:34.173 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/api/autores_CT/DameGUID - null null
+2024-12-24 12:23:34.212 -03:00 [INF] Executing endpoint 'WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores)'
+2024-12-24 12:23:34.242 -03:00 [INF] Route matched with {action = "ObtenerGuid", controller = "Autores"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult ObtenerGuid() on controller WebApp_Autores.Controllers.AutoresController (WebApp_Autores).
+2024-12-24 12:23:34.574 -03:00 [INF] ***Hola Mundo antes de retornar los guid****
+2024-12-24 12:23:34.575 -03:00 [INF] despues transit serv_Transit 575872dc-1a3e-42ad-abaf-a5d046b130c3 TRansit servicio.DameGuidTransit  b9f396a4-e5c4-42e0-b0f7-7bce61dcf3ad Scope  8e9cb347-2a99-45fa-bd42-56dd1f7eee42 Single 21bef122-acf4-4564-910f-c321ce2c93e4 
+2024-12-24 12:23:34.577 -03:00 [INF] despues2 TRansit serv_Transit 575872dc-1a3e-42ad-abaf-a5d046b130c3 TRansit servicio.DameGuidTransit b9f396a4-e5c4-42e0-b0f7-7bce61dcf3ad Scope  8e9cb347-2a99-45fa-bd42-56dd1f7eee42 Single 21bef122-acf4-4564-910f-c321ce2c93e4 
+2024-12-24 12:23:34.578 -03:00 [INF] despues3 TRansit serv_Transit2 nuevo b2144a4f-459d-4bd0-87ab-2795607af9df otro Guid c26cf7a2-0a93-4dc8-814c-773775ba8825
+2024-12-24 12:23:34.587 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`7[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 12:23:34.606 -03:00 [INF] Executed action WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores) in 357.4424ms
+2024-12-24 12:23:34.609 -03:00 [INF] Executed endpoint 'WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores)'
+2024-12-24 12:23:34.611 -03:00 [INF] CRT******* {"autoresControllertransist":"575872dc-1a3e-42ad-abaf-a5d046b130c3","servicioA_Tr":"b9f396a4-e5c4-42e0-b0f7-7bce61dcf3ad","autoresServiceScope":"8e9cb347-2a99-45fa-bd42-56dd1f7eee42","servicioA_Sc":"8e9cb347-2a99-45fa-bd42-56dd1f7eee42","autoresSingleton":"21bef122-acf4-4564-910f-c321ce2c93e4","servicioA_Si":"21bef122-acf4-4564-910f-c321ce2c93e4","nuevoGuid":"c26cf7a2-0a93-4dc8-814c-773775ba8825"} ******CRT
+2024-12-24 12:23:34.615 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/api/autores_CT/DameGUID - 200 null application/json; charset=utf-8 442.5124ms
+2024-12-24 12:23:36.111 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/api/autores_CT/DameGUID - null null
+2024-12-24 12:23:36.120 -03:00 [INF] Executing endpoint 'WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores)'
+2024-12-24 12:23:36.123 -03:00 [INF] Route matched with {action = "ObtenerGuid", controller = "Autores"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult ObtenerGuid() on controller WebApp_Autores.Controllers.AutoresController (WebApp_Autores).
+2024-12-24 12:23:36.139 -03:00 [INF] ***Hola Mundo antes de retornar los guid****
+2024-12-24 12:23:36.141 -03:00 [INF] despues transit serv_Transit 04ee6556-0d4b-4aad-a600-117175e98693 TRansit servicio.DameGuidTransit  14b2b98a-191a-4cae-a93f-d2dff492d8ac Scope  b9be153f-7977-4bc3-860c-4122257543dd Single 21bef122-acf4-4564-910f-c321ce2c93e4 
+2024-12-24 12:23:36.143 -03:00 [INF] despues2 TRansit serv_Transit 04ee6556-0d4b-4aad-a600-117175e98693 TRansit servicio.DameGuidTransit 14b2b98a-191a-4cae-a93f-d2dff492d8ac Scope  b9be153f-7977-4bc3-860c-4122257543dd Single 21bef122-acf4-4564-910f-c321ce2c93e4 
+2024-12-24 12:23:36.144 -03:00 [INF] despues3 TRansit serv_Transit2 nuevo 8e809f24-5795-4db3-80f6-ebd2d4e2376f otro Guid c5468b3b-d27b-431c-9997-ca227041c5ce
+2024-12-24 12:23:36.146 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`7[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 12:23:36.147 -03:00 [INF] Executed action WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores) in 19.2111ms
+2024-12-24 12:23:36.149 -03:00 [INF] Executed endpoint 'WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores)'
+2024-12-24 12:23:36.150 -03:00 [INF] CRT******* {"autoresControllertransist":"04ee6556-0d4b-4aad-a600-117175e98693","servicioA_Tr":"14b2b98a-191a-4cae-a93f-d2dff492d8ac","autoresServiceScope":"b9be153f-7977-4bc3-860c-4122257543dd","servicioA_Sc":"b9be153f-7977-4bc3-860c-4122257543dd","autoresSingleton":"21bef122-acf4-4564-910f-c321ce2c93e4","servicioA_Si":"21bef122-acf4-4564-910f-c321ce2c93e4","nuevoGuid":"c5468b3b-d27b-431c-9997-ca227041c5ce"} ******CRT
+2024-12-24 12:23:36.152 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/api/autores_CT/DameGUID - 200 null application/json; charset=utf-8 41.734ms
+2024-12-24 12:28:11.156 -03:00 [INF] La aplicación ha iniciado correctamente.
+2024-12-24 12:28:11.187 -03:00 [ERR] Este es un ejemplo de log de error.
+2024-12-24 12:28:11.431 -03:00 [INF] Now listening on: https://localhost:7243
+2024-12-24 12:28:11.434 -03:00 [INF] Now listening on: http://localhost:5295
+2024-12-24 12:28:11.514 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 12:28:11.518 -03:00 [INF] Hosting environment: Development
+2024-12-24 12:28:11.520 -03:00 [INF] Content root path: C:\Users\carlo\OneDrive\Documentos\Programas NET\Curso API\WebApp_Autores\WebApp_Autores
+2024-12-24 12:28:12.362 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/swagger/index.html - null null
+2024-12-24 12:28:12.645 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/swagger/index.html - 200 null text/html;charset=utf-8 297.4415ms
+2024-12-24 12:28:12.672 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 12:28:12.688 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 16.0211ms
+2024-12-24 12:28:12.698 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/_vs/browserLink - null null
+2024-12-24 12:28:12.775 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.9043ms
+2024-12-24 12:28:12.935 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/swagger/v1/swagger.json - null null
+2024-12-24 12:28:12.954 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/swagger/index.html - null null
+2024-12-24 12:28:12.974 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/swagger/index.html - 200 null text/html;charset=utf-8 20.2809ms
+2024-12-24 12:28:12.984 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.7207ms
+2024-12-24 12:28:20.969 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/api/autores_CT/DameGUID - null null
+2024-12-24 12:28:20.997 -03:00 [INF] Executing endpoint 'WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores)'
+2024-12-24 12:28:21.025 -03:00 [INF] Route matched with {action = "ObtenerGuid", controller = "Autores"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult ObtenerGuid() on controller WebApp_Autores.Controllers.AutoresController (WebApp_Autores).
+2024-12-24 12:28:21.165 -03:00 [INF] ***Hola Mundo antes de retornar los guid****
+2024-12-24 12:28:21.171 -03:00 [INF] despues transit serv_Transit 5c77e7a8-567a-46d5-8087-3d22281ea698 TRansit servicio.DameGuidTransit  3cac66b7-e645-4efa-b185-4d65c126e796 Scope  6c7eecfb-0e3e-4173-a58b-ce0bd374208c Single 77e0f70f-1cff-4772-97f9-a53aca78ec78 
+2024-12-24 12:28:21.173 -03:00 [INF] despues2 TRansit serv_Transit 5c77e7a8-567a-46d5-8087-3d22281ea698 TRansit servicio.DameGuidTransit 3cac66b7-e645-4efa-b185-4d65c126e796 Scope  6c7eecfb-0e3e-4173-a58b-ce0bd374208c Single 77e0f70f-1cff-4772-97f9-a53aca78ec78 
+2024-12-24 12:28:21.176 -03:00 [INF] despues3 TRansit serv_Transit2 nuevo 7ff2369d-b8e4-44af-99de-5c5bfc78e092 otro Guid f3c22dfb-ad5a-4aeb-9ce4-65997d690627
+2024-12-24 12:28:21.181 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`7[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 12:28:21.196 -03:00 [INF] Executed action WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores) in 161.2107ms
+2024-12-24 12:28:21.198 -03:00 [INF] Executed endpoint 'WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores)'
+2024-12-24 12:28:21.204 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/api/autores_CT/DameGUID - 200 null application/json; charset=utf-8 235.7087ms
+2024-12-24 12:28:24.045 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/api/autores_CT/DameGUID - null null
+2024-12-24 12:28:24.051 -03:00 [INF] Executing endpoint 'WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores)'
+2024-12-24 12:28:24.054 -03:00 [INF] Route matched with {action = "ObtenerGuid", controller = "Autores"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult ObtenerGuid() on controller WebApp_Autores.Controllers.AutoresController (WebApp_Autores).
+2024-12-24 12:28:24.066 -03:00 [INF] ***Hola Mundo antes de retornar los guid****
+2024-12-24 12:28:24.069 -03:00 [INF] despues transit serv_Transit 74b074c7-e7c6-4d7f-bb90-78a775dd1cfb TRansit servicio.DameGuidTransit  51b8721f-efae-4c93-8bcb-1cb084a90851 Scope  00894772-70bc-493f-a4ba-da1c5f14ead1 Single 77e0f70f-1cff-4772-97f9-a53aca78ec78 
+2024-12-24 12:28:24.071 -03:00 [INF] despues2 TRansit serv_Transit 74b074c7-e7c6-4d7f-bb90-78a775dd1cfb TRansit servicio.DameGuidTransit 51b8721f-efae-4c93-8bcb-1cb084a90851 Scope  00894772-70bc-493f-a4ba-da1c5f14ead1 Single 77e0f70f-1cff-4772-97f9-a53aca78ec78 
+2024-12-24 12:28:24.073 -03:00 [INF] despues3 TRansit serv_Transit2 nuevo a8200c64-36be-44e5-90e2-9763ef403cfa otro Guid e7efd4ad-1d80-4e39-89f3-bfca81069fb9
+2024-12-24 12:28:24.075 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`7[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 12:28:24.077 -03:00 [INF] Executed action WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores) in 19.144ms
+2024-12-24 12:28:24.079 -03:00 [INF] Executed endpoint 'WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores)'
+2024-12-24 12:28:24.080 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/api/autores_CT/DameGUID - 200 null application/json; charset=utf-8 35.2816ms
+2024-12-24 12:30:16.429 -03:00 [INF] La aplicación ha iniciado correctamente.
+2024-12-24 12:30:16.465 -03:00 [ERR] Este es un ejemplo de log de error.
+2024-12-24 12:30:16.762 -03:00 [INF] Now listening on: https://localhost:7243
+2024-12-24 12:30:16.766 -03:00 [INF] Now listening on: http://localhost:5295
+2024-12-24 12:30:16.907 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 12:30:16.911 -03:00 [INF] Hosting environment: Development
+2024-12-24 12:30:16.913 -03:00 [INF] Content root path: C:\Users\carlo\OneDrive\Documentos\Programas NET\Curso API\WebApp_Autores\WebApp_Autores
+2024-12-24 12:30:17.702 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/swagger/index.html - null null
+2024-12-24 12:30:17.913 -03:00 [INF] CRT %%%%%%%<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+    <style>
+
+        html {
+            box-sizing: border-box;
+            overflow: -moz-scrollbars-vertical;
+            overflow-y: scroll;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            background: #fafafa;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div id="swagger-ui"></div>
+
+    <!-- Workaround for https://github.com/swagger-api/swagger-editor/issues/1371 -->
+    <script>
+        if (window.navigator.userAgent.indexOf("Edge") > -1) {
+            console.log("Removing native Edge fetch in favor of swagger-ui's polyfill")
+            window.fetch = undefined;
+        }
+    </script>
+
+    <script src="./swagger-ui-bundle.js"></script>
+    <script src="./swagger-ui-standalone-preset.js"></script>
+    <script>
+        /* Source: https://gist.github.com/lamberta/3768814
+         * Parse a string function definition and return a function object. Does not use eval.
+         * @param {string} str
+         * @return {function}
+         *
+         * Example:
+         *  var f = function (x, y) { return x * y; };
+         *  var g = parseFunction(f.toString());
+         *  g(33, 3); //=> 99
+         */
+        function parseFunction(str) {
+            if (!str) return void (0);
+
+            var fn_body_idx = str.indexOf('{'),
+                fn_body = str.substring(fn_body_idx + 1, str.lastIndexOf('}')),
+                fn_declare = str.substring(0, fn_body_idx),
+                fn_params = fn_declare.substring(fn_declare.indexOf('(') + 1, fn_declare.lastIndexOf(')')),
+                args = fn_params.split(',');
+
+            args.push(fn_body);
+
+            function Fn() {
+                return Function.apply(this, args);
+            }
+            Fn.prototype = Function.prototype;
+
+            return new Fn();
+        }
+
+        window.onload = function () {
+            var configObject = JSON.parse('{"urls":[{"url":"v1/swagger.json","name":"WebApp_Autores v1"}],"deepLinking":false,"persistAuthorization":false,"displayOperationId":false,"defaultModelsExpandDepth":1,"defaultModelExpandDepth":1,"defaultModelRendering":"example","displayRequestDuration":false,"docExpansion":"list","showExtensions":false,"showCommonExtensions":false,"supportedSubmitMethods":["get","put","post","delete","options","head","patch","trace"],"tryItOutEnabled":false}');
+            var oauthConfigObject = JSON.parse('{"scopeSeparator":" ","scopes":[],"useBasicAuthenticationWithAccessCodeGrant":false,"usePkceWithAuthorizationCodeGrant":false}');
+
+            // Workaround for https://github.com/swagger-api/swagger-ui/issues/5945
+            configObject.urls.forEach(function (item) {
+                if (item.url.startsWith("http") || item.url.startsWith("/")) return;
+                item.url = window.location.href.replace("index.html", item.url).split('#')[0];
+            });
+
+            // If validatorUrl is not explicitly provided, disable the feature by setting to null
+            if (!configObject.hasOwnProperty("validatorUrl"))
+                configObject.validatorUrl = null
+
+            // If oauth2RedirectUrl isn't specified, use the built-in default
+            if (!configObject.hasOwnProperty("oauth2RedirectUrl"))
+                configObject.oauth2RedirectUrl = (new URL("oauth2-redirect.html", window.location.href)).href;
+
+            // Apply mandatory parameters
+            configObject.dom_id = "#swagger-ui";
+            configObject.presets = [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset];
+            configObject.layout = "StandaloneLayout";
+
+            // Parse and add interceptor functions
+            var interceptors = JSON.parse('{"RequestInterceptorFunction":null,"ResponseInterceptorFunction":null}');
+            if (interceptors.RequestInterceptorFunction)
+                configObject.requestInterceptor = parseFunction(interceptors.RequestInterceptorFunction);
+            if (interceptors.ResponseInterceptorFunction)
+                configObject.responseInterceptor = parseFunction(interceptors.ResponseInterceptorFunction);
+
+            // Begin Swagger UI call region
+
+            const ui = SwaggerUIBundle(configObject);
+
+            ui.initOAuth(oauthConfigObject);
+
+            // End Swagger UI call region
+
+            window.ui = ui
+        }
+    </script>
+</body>
+</html>
+ CRT %%%%%%%
+2024-12-24 12:30:17.934 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/swagger/index.html - 200 null text/html;charset=utf-8 242.3912ms
+2024-12-24 12:30:17.973 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 12:30:17.975 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/_vs/browserLink - null null
+2024-12-24 12:30:17.989 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 16.2102ms
+2024-12-24 12:30:18.071 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/_vs/browserLink - 200 null text/javascript; charset=UTF-8 96.126ms
+2024-12-24 12:30:18.112 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/swagger/index.html - null null
+2024-12-24 12:30:18.123 -03:00 [INF] CRT %%%%%%%<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+    <style>
+
+        html {
+            box-sizing: border-box;
+            overflow: -moz-scrollbars-vertical;
+            overflow-y: scroll;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            background: #fafafa;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div id="swagger-ui"></div>
+
+    <!-- Workaround for https://github.com/swagger-api/swagger-editor/issues/1371 -->
+    <script>
+        if (window.navigator.userAgent.indexOf("Edge") > -1) {
+            console.log("Removing native Edge fetch in favor of swagger-ui's polyfill")
+            window.fetch = undefined;
+        }
+    </script>
+
+    <script src="./swagger-ui-bundle.js"></script>
+    <script src="./swagger-ui-standalone-preset.js"></script>
+    <script>
+        /* Source: https://gist.github.com/lamberta/3768814
+         * Parse a string function definition and return a function object. Does not use eval.
+         * @param {string} str
+         * @return {function}
+         *
+         * Example:
+         *  var f = function (x, y) { return x * y; };
+         *  var g = parseFunction(f.toString());
+         *  g(33, 3); //=> 99
+         */
+        function parseFunction(str) {
+            if (!str) return void (0);
+
+            var fn_body_idx = str.indexOf('{'),
+                fn_body = str.substring(fn_body_idx + 1, str.lastIndexOf('}')),
+                fn_declare = str.substring(0, fn_body_idx),
+                fn_params = fn_declare.substring(fn_declare.indexOf('(') + 1, fn_declare.lastIndexOf(')')),
+                args = fn_params.split(',');
+
+            args.push(fn_body);
+
+            function Fn() {
+                return Function.apply(this, args);
+            }
+            Fn.prototype = Function.prototype;
+
+            return new Fn();
+        }
+
+        window.onload = function () {
+            var configObject = JSON.parse('{"urls":[{"url":"v1/swagger.json","name":"WebApp_Autores v1"}],"deepLinking":false,"persistAuthorization":false,"displayOperationId":false,"defaultModelsExpandDepth":1,"defaultModelExpandDepth":1,"defaultModelRendering":"example","displayRequestDuration":false,"docExpansion":"list","showExtensions":false,"showCommonExtensions":false,"supportedSubmitMethods":["get","put","post","delete","options","head","patch","trace"],"tryItOutEnabled":false}');
+            var oauthConfigObject = JSON.parse('{"scopeSeparator":" ","scopes":[],"useBasicAuthenticationWithAccessCodeGrant":false,"usePkceWithAuthorizationCodeGrant":false}');
+
+            // Workaround for https://github.com/swagger-api/swagger-ui/issues/5945
+            configObject.urls.forEach(function (item) {
+                if (item.url.startsWith("http") || item.url.startsWith("/")) return;
+                item.url = window.location.href.replace("index.html", item.url).split('#')[0];
+            });
+
+            // If validatorUrl is not explicitly provided, disable the feature by setting to null
+            if (!configObject.hasOwnProperty("validatorUrl"))
+                configObject.validatorUrl = null
+
+            // If oauth2RedirectUrl isn't specified, use the built-in default
+            if (!configObject.hasOwnProperty("oauth2RedirectUrl"))
+                configObject.oauth2RedirectUrl = (new URL("oauth2-redirect.html", window.location.href)).href;
+
+            // Apply mandatory parameters
+            configObject.dom_id = "#swagger-ui";
+            configObject.presets = [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset];
+            configObject.layout = "StandaloneLayout";
+
+            // Parse and add interceptor functions
+            var interceptors = JSON.parse('{"RequestInterceptorFunction":null,"ResponseInterceptorFunction":null}');
+            if (interceptors.RequestInterceptorFunction)
+                configObject.requestInterceptor = parseFunction(interceptors.RequestInterceptorFunction);
+            if (interceptors.ResponseInterceptorFunction)
+                configObject.responseInterceptor = parseFunction(interceptors.ResponseInterceptorFunction);
+
+            // Begin Swagger UI call region
+
+            const ui = SwaggerUIBundle(configObject);
+
+            ui.initOAuth(oauthConfigObject);
+
+            // End Swagger UI call region
+
+            window.ui = ui
+        }
+    </script>
+</body>
+</html>
+ CRT %%%%%%%
+2024-12-24 12:30:18.145 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/swagger/index.html - 200 null text/html;charset=utf-8 34.1273ms
+2024-12-24 12:30:18.223 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/swagger/v1/swagger.json - null null
+2024-12-24 12:30:18.245 -03:00 [INF] CRT %%%%%%%{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WebApp_Autores",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/autores_CT/listado": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/listado": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/autores_CT": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Autores"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/autores_CT/DameGUID": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/autores_CT/primero": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "parameters": [
+          {
+            "name": "miparametro",
+            "in": "header",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "nombre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/autores_CT/buscador/{id}": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/autores_CT/buscador_curso/{id}/{nombre}": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "nombre",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/autores_CT/buscador_curso/{nombre}": {
+      "get": {
+        "tags": [
+          "Autores"
+        ],
+        "parameters": [
+          {
+            "name": "nombre",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Autor"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/autores_CT/{id}": {
+      "put": {
+        "tags": [
+          "Autores"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Autores"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Autor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/libros/{id}": {
+      "get": {
+        "tags": [
+          "Libros"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Libro"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Libro"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Libro"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/libros": {
+      "post": {
+        "tags": [
+          "Libros"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Libro"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Libro"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Libro"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Xautores_CT_V2": {
+      "get": {
+        "tags": [
+          "XAutores_v2"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Xautores_CT_V3": {
+      "get": {
+        "tags": [
+          "XAutores_v3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Autor"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Autor": {
+        "required": [
+          "edad",
+          "nombre"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
+          },
+          "edad": {
+            "maximum": 120,
+            "minimum": 18,
+            "type": "integer",
+            "format": "int32"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "libros": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Libro"
+            },
+            "nullable": true
+          },
+          "mayor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "menor": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Libro": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "titulo": {
+            "type": "string",
+            "nullable": true
+          },
+          "autorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "autor": {
+            "$ref": "#/components/schemas/Autor"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+} CRT %%%%%%%
+2024-12-24 12:30:18.309 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.0276ms
+2024-12-24 12:30:24.474 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/api/autores_CT/DameGUID - null null
+2024-12-24 12:30:24.511 -03:00 [INF] Executing endpoint 'WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores)'
+2024-12-24 12:30:24.528 -03:00 [INF] Route matched with {action = "ObtenerGuid", controller = "Autores"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult ObtenerGuid() on controller WebApp_Autores.Controllers.AutoresController (WebApp_Autores).
+2024-12-24 12:30:24.660 -03:00 [INF] ***Hola Mundo antes de retornar los guid****
+2024-12-24 12:30:24.663 -03:00 [INF] despues transit serv_Transit 7e87531c-987e-427c-95fc-61635723c3cb TRansit servicio.DameGuidTransit  503a8c2d-0c83-430a-8772-7b52592dbbc9 Scope  ea5817c2-c6df-41ab-bef2-27a401acca0b Single 16b2b68c-350b-4106-ae22-15abe9bba271 
+2024-12-24 12:30:24.664 -03:00 [INF] despues2 TRansit serv_Transit 7e87531c-987e-427c-95fc-61635723c3cb TRansit servicio.DameGuidTransit 503a8c2d-0c83-430a-8772-7b52592dbbc9 Scope  ea5817c2-c6df-41ab-bef2-27a401acca0b Single 16b2b68c-350b-4106-ae22-15abe9bba271 
+2024-12-24 12:30:24.665 -03:00 [INF] despues3 TRansit serv_Transit2 nuevo 01adb8bf-8286-492b-bc45-0d606f389f73 otro Guid e5372dd6-db65-4d88-8662-d756393078a5
+2024-12-24 12:30:24.673 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`7[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 12:30:24.687 -03:00 [INF] Executed action WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores) in 151.3672ms
+2024-12-24 12:30:24.691 -03:00 [INF] Executed endpoint 'WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores)'
+2024-12-24 12:30:24.693 -03:00 [INF] CRT %%%%%%%{"autoresControllertransist":"7e87531c-987e-427c-95fc-61635723c3cb","servicioA_Tr":"503a8c2d-0c83-430a-8772-7b52592dbbc9","autoresServiceScope":"ea5817c2-c6df-41ab-bef2-27a401acca0b","servicioA_Sc":"ea5817c2-c6df-41ab-bef2-27a401acca0b","autoresSingleton":"16b2b68c-350b-4106-ae22-15abe9bba271","servicioA_Si":"16b2b68c-350b-4106-ae22-15abe9bba271","nuevoGuid":"e5372dd6-db65-4d88-8662-d756393078a5"} CRT %%%%%%%
+2024-12-24 12:30:24.697 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/api/autores_CT/DameGUID - 200 null application/json; charset=utf-8 224.0363ms
+2024-12-24 12:30:28.857 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7243/api/autores_CT/DameGUID - null null
+2024-12-24 12:30:28.866 -03:00 [INF] Executing endpoint 'WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores)'
+2024-12-24 12:30:28.868 -03:00 [INF] Route matched with {action = "ObtenerGuid", controller = "Autores"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult ObtenerGuid() on controller WebApp_Autores.Controllers.AutoresController (WebApp_Autores).
+2024-12-24 12:30:28.879 -03:00 [INF] ***Hola Mundo antes de retornar los guid****
+2024-12-24 12:30:28.882 -03:00 [INF] despues transit serv_Transit 2acd82da-bd00-44fb-b0c8-27ec4f0e4493 TRansit servicio.DameGuidTransit  61035afc-5377-4acf-83b1-c40c1b716ab0 Scope  a63a2fb7-e43e-4597-8937-6d47cd90560f Single 16b2b68c-350b-4106-ae22-15abe9bba271 
+2024-12-24 12:30:28.883 -03:00 [INF] despues2 TRansit serv_Transit 2acd82da-bd00-44fb-b0c8-27ec4f0e4493 TRansit servicio.DameGuidTransit 61035afc-5377-4acf-83b1-c40c1b716ab0 Scope  a63a2fb7-e43e-4597-8937-6d47cd90560f Single 16b2b68c-350b-4106-ae22-15abe9bba271 
+2024-12-24 12:30:28.884 -03:00 [INF] despues3 TRansit serv_Transit2 nuevo ff9b0c06-3f64-4864-b7f7-80e8587241fa otro Guid 9a087681-4a67-4235-a7c9-a8bd2c05b7f4
+2024-12-24 12:30:28.886 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`7[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 12:30:28.891 -03:00 [INF] Executed action WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores) in 19.2256ms
+2024-12-24 12:30:28.894 -03:00 [INF] Executed endpoint 'WebApp_Autores.Controllers.AutoresController.ObtenerGuid (WebApp_Autores)'
+2024-12-24 12:30:28.896 -03:00 [INF] CRT %%%%%%%{"autoresControllertransist":"2acd82da-bd00-44fb-b0c8-27ec4f0e4493","servicioA_Tr":"61035afc-5377-4acf-83b1-c40c1b716ab0","autoresServiceScope":"a63a2fb7-e43e-4597-8937-6d47cd90560f","servicioA_Sc":"a63a2fb7-e43e-4597-8937-6d47cd90560f","autoresSingleton":"16b2b68c-350b-4106-ae22-15abe9bba271","servicioA_Si":"16b2b68c-350b-4106-ae22-15abe9bba271","nuevoGuid":"9a087681-4a67-4235-a7c9-a8bd2c05b7f4"} CRT %%%%%%%
+2024-12-24 12:30:28.898 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7243/api/autores_CT/DameGUID - 200 null application/json; charset=utf-8 42.2336ms
