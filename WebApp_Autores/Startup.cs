@@ -4,6 +4,8 @@ using System.Text.Json.Serialization;
 using WebApp_Autores.Controllers;
 using WebApp_Autores.Midelware;
 using WebApp_Autores.Servicios;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+
 
 namespace WebApp_Autores
 {
@@ -36,6 +38,9 @@ namespace WebApp_Autores
             services.AddScoped<ServicioScoped>();
             services.AddSingleton<ServicioSingleton>();
 
+            services.AddResponseCaching();   //me activa lo del cache
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();  /*me permite el control de acceso*/
+
 
 
 
@@ -54,7 +59,7 @@ namespace WebApp_Autores
             // Configure the HTTP request pipeline.
             if (env.IsDevelopment())
             {
-                app.UseSwagger();
+                app.UseSwagger();   
                 app.UseSwaggerUI();
             }
 
@@ -62,7 +67,11 @@ namespace WebApp_Autores
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseResponseCaching();   /*Esto me permite cahear respuestas de un peticion http*/
+
+
+
+            app.UseAuthorization();  /*Esto es para la autorizacion de acecso*/
 
             app.UseEndpoints(endpoints =>
             {

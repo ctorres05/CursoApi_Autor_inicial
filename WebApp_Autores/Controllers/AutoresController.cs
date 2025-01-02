@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
 using WebApp_Autores.Entidades;
 using WebApp_Autores.Servicios;
 
@@ -58,6 +60,8 @@ namespace WebApp_Autores.Controllers
         }
 
         [HttpGet("DameGUID")]
+        [ResponseCache(Duration = 5)]  //dentro de los 5 segundos me retorna lo que tiene en memoria
+        [Authorize]
         public ActionResult ObtenerGuid()
         {
             logger.LogInformation("***Hola Mundo antes de retornar los guid****");

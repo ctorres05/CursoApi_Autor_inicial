@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\validaciones\\primeraletramayusculaatribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\validaciones\\primeraletramayusculaatribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\webapp_autores.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\webapp_autores.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\logs\\log-20250102.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\logs\\log-20250102.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\midelware\\logearrespuestahttpmidelware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\midelware\\logearrespuestahttpmidelware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\servicios\\serviciosdisponibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,20 +39,12 @@
       "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\servicios\\iservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\validaciones\\primeraletramayusculaatribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\validaciones\\primeraletramayusculaatribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\logs\\log-20241226.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\logs\\log-20241226.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\midelware\\logearrespuestahttpmidelware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\midelware\\logearrespuestahttpmidelware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -41,14 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|c:\\users\\carlo\\onedrive\\documentos\\programas net\\curso api\\webapp_autores\\webapp_autores\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BA4DEDC-81E0-4347-8B25-DFE3CB0AA729}|WebApp_Autores\\WebApp_Autores.csproj|solutionrelative:webapp_autores\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +82,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "WebApp_Autores",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\WebApp_Autores.csproj",
+              "RelativeDocumentMoniker": "WebApp_Autores\\WebApp_Autores.csproj",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\WebApp_Autores.csproj",
+              "RelativeToolTip": "WebApp_Autores\\WebApp_Autores.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-02T20:50:27.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "log-20250102.txt",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\logs\\log-20250102.txt",
+              "RelativeDocumentMoniker": "WebApp_Autores\\logs\\log-20250102.txt",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\logs\\log-20250102.txt",
+              "RelativeToolTip": "WebApp_Autores\\logs\\log-20250102.txt",
+              "ViewState": "AgIAAJ4DAAAAAAAAAAAAANMDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-01-02T20:41:24.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "PrimeraLEtraMayusculaAtribute.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Validaciones\\PrimeraLEtraMayusculaAtribute.cs",
               "RelativeDocumentMoniker": "WebApp_Autores\\Validaciones\\PrimeraLEtraMayusculaAtribute.cs",
@@ -87,20 +121,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "log-20241226.txt",
               "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\logs\\log-20241226.txt",
               "RelativeDocumentMoniker": "WebApp_Autores\\logs\\log-20241226.txt",
               "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\logs\\log-20241226.txt",
               "RelativeToolTip": "WebApp_Autores\\logs\\log-20241226.txt",
-              "ViewState": "AgIAABcEAAAAAAAAAAAAALUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUEAAAAAAAAAABBwLUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2024-12-26T22:08:34.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "ServiciosDisponibles.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Servicios\\ServiciosDisponibles.cs",
               "RelativeDocumentMoniker": "WebApp_Autores\\Servicios\\ServiciosDisponibles.cs",
@@ -113,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "IServicio.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Servicios\\IServicio.cs",
               "RelativeDocumentMoniker": "WebApp_Autores\\Servicios\\IServicio.cs",
@@ -126,20 +160,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "LogearRespuestaHttpMidelware.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Midelware\\LogearRespuestaHttpMidelware.cs",
               "RelativeDocumentMoniker": "WebApp_Autores\\Midelware\\LogearRespuestaHttpMidelware.cs",
               "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Midelware\\LogearRespuestaHttpMidelware.cs",
               "RelativeToolTip": "WebApp_Autores\\Midelware\\LogearRespuestaHttpMidelware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-26T20:44:18.875Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\appsettings.Development.json",
               "RelativeDocumentMoniker": "WebApp_Autores\\appsettings.Development.json",
@@ -152,33 +186,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Startup.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Startup.cs",
               "RelativeDocumentMoniker": "WebApp_Autores\\Startup.cs",
               "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Startup.cs",
               "RelativeToolTip": "WebApp_Autores\\Startup.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCQAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwEkAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T19:34:33.309Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Program.cs",
               "RelativeDocumentMoniker": "WebApp_Autores\\Program.cs",
               "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Program.cs",
               "RelativeToolTip": "WebApp_Autores\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwCMAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T20:24:52.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Autor.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Entidades\\Autor.cs",
               "RelativeDocumentMoniker": "WebApp_Autores\\Entidades\\Autor.cs",
@@ -191,20 +225,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "AutoresController.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Controllers\\AutoresController.cs",
               "RelativeDocumentMoniker": "WebApp_Autores\\Controllers\\AutoresController.cs",
               "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Controllers\\AutoresController.cs",
               "RelativeToolTip": "WebApp_Autores\\Controllers\\AutoresController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAcwEMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwD8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T19:09:40.142Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "WebApp_Autores\\ApplicationDbContext.cs",
@@ -217,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "LibrosController.cs",
               "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\WebApp_Autores\\WebApp_Autores\\Controllers\\LibrosController.cs",
               "RelativeDocumentMoniker": "WebApp_Autores\\Controllers\\LibrosController.cs",
