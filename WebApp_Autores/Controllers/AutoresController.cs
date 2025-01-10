@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using WebApp_Autores.Entidades;
+using WebApp_Autores.Filtros;
 using WebApp_Autores.Servicios;
 
 
@@ -46,11 +47,15 @@ namespace WebApp_Autores.Controllers
         [HttpGet]                       /* ruta seria esta: api/autores_CT  */
         [HttpGet("listado")]           /* ruta seria esta: api/autores_CT/listado  */
         [HttpGet("/listado")]          /* ruta seria esta: /listado  */
+        [ServiceFilter(typeof(MiFiltroDeAcciones))]  
+
         public async Task<ActionResult<List<Autor>>> Get()
         {
-           // servicio.RealizarTarea();
+            // servicio.RealizarTarea();
 
             //logger.LogInformation("despues4 NO FUNCIONA");
+
+            throw new NotImplementedException();  /*Esto hace que salga un ERORR*/
 
             return await contex.Autores.Include(x=> x.Libros).ToListAsync();     /*Esto me trae en caso de que esten relacionados las tablas*/
           //  return await contex.Autores.ToListAsync();
@@ -61,12 +66,14 @@ namespace WebApp_Autores.Controllers
 
         [HttpGet("DameGUID")]
         [ResponseCache(Duration = 5)]  //dentro de los 5 segundos me retorna lo que tiene en memoria
-        [Authorize]
+        //[Authorize]     /*Esto me pone un filtro de ACCESO al controller en este caso si esta no se puedew corree me da error 401*/
+        [ServiceFilter(typeof(MiFiltroDeAcciones))]
+
         public ActionResult ObtenerGuid()
         {
-            logger.LogInformation("***Hola Mundo antes de retornar los guid****");
-            logger.LogInformation($"despues transit serv_Transit {serv_Transit.guid} TRansit servicio.DameGuidTransit  {servicio.DameGuidTransit()} Scope  {servicio.DameGuidScoped()} Single {servicio.DameGuidSingleton()} ")  ;
-            logger.LogInformation($"despues2 TRansit serv_Transit {serv_Transit.guid} TRansit servicio.DameGuidTransit {servicio.DameGuidTransit()} Scope  {servicio.DameGuidScoped()} Single {servicio.DameGuidSingleton()} ");
+          //  logger.LogInformation("***Hola Mundo antes de retornar los guid****");
+          //  logger.LogInformation($"despues transit serv_Transit {serv_Transit.guid} TRansit servicio.DameGuidTransit  {servicio.DameGuidTransit()} Scope  {servicio.DameGuidScoped()} Single {servicio.DameGuidSingleton()} ")  ;
+          //  logger.LogInformation($"despues2 TRansit serv_Transit {serv_Transit.guid} TRansit servicio.DameGuidTransit {servicio.DameGuidTransit()} Scope  {servicio.DameGuidScoped()} Single {servicio.DameGuidSingleton()} ");
 
             var ServicioA_Tr1 = serv_Transit2.guid;
 

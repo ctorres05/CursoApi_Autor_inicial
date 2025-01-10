@@ -5,6 +5,8 @@ using WebApp_Autores.Controllers;
 using WebApp_Autores.Midelware;
 using WebApp_Autores.Servicios;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using WebApp_Autores.Filtros;
+using WebApp_Autores.Filtros;
 
 
 namespace WebApp_Autores
@@ -26,7 +28,14 @@ namespace WebApp_Autores
             /*services.AddControllers();  Esto es lo original basico*/
 
 
-            services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+            //services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+            //Amtes era esta linea , ahora para agergar los filtros para todos los controller se pone lo de abajo
+
+            services.AddControllers(opciones => 
+            {
+                opciones.Filters.Add(typeof(FiltroDeExecpcion));
+
+            }).AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
 
@@ -37,6 +46,10 @@ namespace WebApp_Autores
             services.AddTransient<ServicioTransit>();
             services.AddScoped<ServicioScoped>();
             services.AddSingleton<ServicioSingleton>();
+
+            services.AddTransient<MiFiltroDeAcciones>();   /*Aca el fitro se usa especificamente en los controller que yo quiero mediante el [MiFiltro]*/
+
+
 
             services.AddResponseCaching();   //me activa lo del cache
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();  /*me permite el control de acceso*/
